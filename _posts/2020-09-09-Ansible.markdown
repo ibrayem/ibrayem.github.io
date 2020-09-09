@@ -1,1 +1,18 @@
 
+---
+layout: post
+title:  "Asible"
+date:   2020-09-09 13:02:07 -0500
+categories: Ansible RedHat Automation
+---
+**[Ansible][ansible-docs]**<br>
+[Inventory][inventory]<br>
+[Playbook][playbook]<br>
+[Module][module]<br>
+
+
+
+[ansible-docs]: https://jekyllrb.com/docs/home
+[inventory]: https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+[playbook]: https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
+[module]: https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
