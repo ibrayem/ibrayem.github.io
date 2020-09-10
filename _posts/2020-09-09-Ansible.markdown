@@ -4,12 +4,66 @@ title:  "Asible"
 date:   2020-09-09 13:02:07 -0500
 categories: Ansible RedHat Automation
 ---
+
+Determine the version of Ansible that is installed:
+```
+$ ansible --version
+```
+The output will give you location of `cfg` as `config file = /home/user100/.ansible.cfg`. That file will give you location of `inventory` and you can check that file as follow:
+```
+ $ cat /home/user100/.ansible.cfg
+ ...
+ inventory = /home/user100/my_inventory/inventory.txt
+ ...
+
+$ cat /home/user100/my_inventory/inventory.txt
+ansible_user=user1
+ansible_ssh_pass=s3cret
+ansible_port=22
+
+[web]
+node1 ansible_host=x.x.x.x
+node2 ansible_host=x.x.x.x
+node3 ansible_host=x.x.x.x
+
+[control]
+ansible ansible_host=x.x.x.x
+```
+
+**Ad Hoc Commands**
+- list all hosts in inventory > **`$ ansible all --list-hosts`**
+- ping all hosts in web group > **`$ ansible web -m ping`**
+- get uptime from hosts in web group > **`ansible web -m command -a "uptime" -o`**
+- get uptime from specific host only > **`ansible node1 -m command -a "uptime" -o`**
+- install apache with yum on all hosts in web group > **`$ ansible web -m yum -a "name=httpd state=present" -b -o`**
+- start apache on all hosts in web group > **`$ ansible web -m service -a "name=httpd state=started" -b`**
+
+**Playbook**<br>
+install_apache.yaml
+```yaml
+---
+- name: Install the apache web service
+  hosts: web
+  become: yes
+
+  tasks:
+   - name: install apache
+     yum:
+       name: httpd
+       state: present
+
+   - name: start httpd
+     service:
+       name: httpd
+       state: started
+```
+
+
+
 **[Ansible][ansible-docs]**<br>
 [Inventory][inventory]<br>
 [Playbook][playbook]<br>
 [Module][module]<br>
-
-
 
 [ansible-docs]: https://jekyllrb.com/docs/home
 [inventory]: https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
