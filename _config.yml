@@ -30,7 +30,7 @@ twitter_username: akadisoft
 github_username:  ibrayem
 
 # Build settings
-theme: hacker
+theme: minima
 plugins:
   - jekyll-feed
 
