@@ -1,4 +1,5 @@
 [LinkedIn Course Link](https://www.linkedin.com/learning/red-hat-certified-engineer-ex294-cert-prep-1-foundations-of-ansible/view-ansible-documentation?u=2056732)
+
 ---
 
 $ ansible-doc -t cache -l 
@@ -12,6 +13,19 @@ pass host file
 pass two host files
 `$ ansible-playbook -i host.txt -i groups.txt`
 
+---
 
-
+Configuration
+- ansible.cfg
+  - $ANSIBLE_CONFIG (path env variable)
+  - ./ansible.cfg (current dir)
+  - ~/ansible.cfg
+  - /etc/ansible/ansible.cfg
+- Env vars
+- Cmd Line Opts
+  - -e 'ansible_user=user2'
+- Playbook Keywords
+  
+- Ansible vars
+  - vars:
 
