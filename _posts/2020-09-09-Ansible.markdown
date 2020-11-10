@@ -58,6 +58,17 @@ install_apache.yaml
        state: started
 ```
 
+**Tasks**
+
+| Module   | Description                        |
+|----------|------------------------------------|
+| file     | Create directory                   |
+| yum      | Install packages                   |
+| service  | Start/Stop services                |
+| template | Render template file from template |
+| get_url  | Fetch file from url                |
+| git      | clone git from a repo              |
+|          |                                    |
 
 
 **[Ansible][ansible-docs]**<br>
