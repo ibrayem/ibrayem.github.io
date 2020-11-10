@@ -58,7 +58,8 @@ install_apache.yaml
        state: started
 ```
 
-**Tasks**
+**Tasks**<br>
+Task run sequentially
 
 | Module   | Description                        |
 |----------|------------------------------------|
@@ -69,6 +70,29 @@ install_apache.yaml
 | get_url  | Fetch file from url                |
 | git      | clone git from a repo              |
 |          |                                    |
+
+**Hnadlers**<br>
+if `task` has `notify: handler_name` then handlers are called after task completion, e.g.:
+
+```yaml
+tasks:
+- name: "{{ webserver }} package is present"
+  yum:
+    name: "{{ webserver }}"
+    state: latest
+  notify: restart webserver 
+
+- name: latest index.html file is present
+  copy:
+    src: files/index.html
+    dest: /var/www/html/
+
+handlers:
+- name: restart webserver 
+  service:
+    name: "{{ webserver }}"
+    state: restarted
+```
 
 
 **[Ansible][ansible-docs]**<br>
