@@ -113,6 +113,14 @@ Variables with same name defined in multiple sources are overwritten in specific
 15. Inventory vars
 16. Role defaults
 
+**Roles**<br>
+Packaging of closely related ansible content in a directory structure to be shared easily.
+
+**Ansible galaxy**
+Online hub for finding, reusing and sharing ansible roles.<br>
+`# ansible-galaxy init role-name`<br>
+
+
 **[Ansible][ansible-docs]**<br>
 [Inventory][inventory]<br>
 [Playbook][playbook]<br>
