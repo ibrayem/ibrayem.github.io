@@ -18,6 +18,15 @@ Mixer is a control plane component which enforces access control and usage polic
 Pilot is another control plane componennt which provides service discovery for the Envoy sidecars, as well as traffic management capabilities for intelligent routing.<br>
 Auth/Citadel is a control plane component which provides strong service-to-service and end-user authentication with built-in identity and credential management.<br>
 
+ ## Installation ##
+ 1. Install Elasticsearch operator.
+ 2. Install Jeager operator.
+ 3. Install Kiali operator.
+ 4. Install Servicemesh operator.
+ 
+ 1. create project
+ `oc adm new-project istio-system --display-name="Service Mesh System"`
+ 
  
  ## Resources ##
  [service mesh docs](https://docs.openshift.com/container-platform/4.5/service_mesh/v1x/installing-ossm.html)
