@@ -19,3 +19,6 @@ Pilot is another control plane componennt which provides service discovery for t
 Auth/Citadel is a control plane component which provides strong service-to-service and end-user authentication with built-in identity and credential management.<br>
 
  
+ ## Resources ##
+ [service mesh docs](https://docs.openshift.com/container-platform/4.5/service_mesh/v1x/installing-ossm.html)
+ 
