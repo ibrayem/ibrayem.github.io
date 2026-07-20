@@ -6,11 +6,8 @@ Minimum-boilerplate blog: GitHub builds and hosts it for you, no local install n
 On GitHub, create a **new public repo** named exactly:
 
 ```
-<your-username>.github.io
+ibrayem.github.io
 ```
-
-(Replace `<your-username>` with your actual GitHub username. This exact name is
-what triggers GitHub's free auto-hosting.)
 
 ## 2. Push these files
 ```bash
@@ -19,14 +16,14 @@ git init
 git add .
 git commit -m "Initial blog setup"
 git branch -M main
-git remote add origin https://github.com/<your-username>/<your-username>.github.io.git
+git remote add origin https://github.com/ibrayem/ibrayem.github.io.git
 git push -u origin main
 ```
 
 ## 3. Turn on Pages
 Repo → **Settings → Pages** → Source: `Deploy from a branch` → Branch: `main` / `(root)` → Save.
 
-Your site goes live at `https://<your-username>.github.io` within about a minute.
+Your site goes live at `https://ibrayem.github.io` within about a minute.
 
 ## 4. Write new posts
 Add a file to `_posts/` named `YYYY-MM-DD-your-title.md`:

@@ -1,14 +1,13 @@
 title: My Travel Blog
 description: Notes, photos, and stories from the road.
 theme: minima          # built-in GitHub Pages theme — zero setup required
-author: Your Name
+author: ibrayem
 show_excerpts: true
 
 # Optional: nav links (minima theme picks these up automatically)
 minima:
   social_links:
-    - { platform: github,   user_url: "https://github.com/yourusername" }
-    - { platform: instagram, user_url: "https://instagram.com/yourusername" }
+    - { platform: github,   user_url: "https://github.com/ibrayem" }
 
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
